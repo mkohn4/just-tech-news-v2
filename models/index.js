@@ -19,7 +19,8 @@ Post.belongsToMany(User, {
 });
 
 Post.hasMany(Vote, {
-  foreignKey: 'post_id'
+  foreignKey: 'post_id',
+  onDelete: 'SET NULL'
 });
 
 Post.hasMany(Comment, {
@@ -42,7 +43,8 @@ Comment.belongsTo(Post, {
 });
 
 User.hasMany(Post, {
-  foreignKey: 'user_id'
+  foreignKey: 'user_id',
+  onDelete: 'SET NULL'
 });
 
 User.hasMany(Vote, {

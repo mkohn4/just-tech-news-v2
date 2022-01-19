@@ -70,7 +70,7 @@ router.get('/:id', (req, res) => {
       }
       console.log('dbPostData'+JSON.stringify(dbPostData));
 
-      // res.json(dbPostData);
+      res.json(dbPostData);
     })
     .catch(err => {
       console.log(err);

@@ -3,8 +3,10 @@
     <h2>Edit Post</h2>
     <form class="edit-post-form">
         <div>
-            <input name="pet_name" type="text" value="{{post.pet_name}}"/>
+            <input name="pet-name" type="text" value="{{post.pet_name}}"/>
         </div>
+        <div>
+            <textarea name="description">{{post.description}}</textarea>
         <div>
             {{post.vote_count}} {{format_plural "point" post.vote_count}} by you on {{format_date post.created_at}}
             
